@@ -1,4 +1,4 @@
-.post-list {
+.user-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -6,7 +6,7 @@
     justify-content: center;
 }
 
-.post-card {
+.user-card {
     outline: 1px black solid;
     padding: 10px;
     text-align: left;
@@ -14,34 +14,17 @@
 
     img {
         width: 100%;
-        filter: grayscale(100%);
-        transition: filter 0.3s;
-        &:hover{
-            filter: none;
-        }
-    }
-    
-    .post-react-buttons {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        gap: 10px;
-    }
-    
-    button {
-        width: 100%;
-        outline: 1px black solid;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    .post-card {
+    .user-card {
         width: 45%;
     }
 }
 
 @media only screen and (min-width: 1000px) {
-    .post-card {
+    .user-card {
         width: 30%;
     }
 }

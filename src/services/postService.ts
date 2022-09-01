@@ -18,6 +18,8 @@ export async function getPageOfPosts(page: number, pageSize: number): Promise<Pa
     // and we should get away with it for small local databases like ours.
     const postModels = await Promise.all(posts.map(toPostModel));
 
+    console.log(postModels)
+
     return {
         results: postModels,
         next: (page * pageSize) < postsCount ? `/posts/?page=${page + 1}&pageSize=${pageSize}` : null,

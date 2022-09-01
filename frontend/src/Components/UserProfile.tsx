@@ -43,7 +43,7 @@ function UserProfile() {
                 .then(data => setData(data));
         }, []
     );
-console.log(data)
+
     return (<>
         {/* <a href={`/users/${data?.id}`}> */}
         <div key={data?.id}>

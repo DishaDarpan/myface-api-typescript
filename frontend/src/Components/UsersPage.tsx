@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './UsersPage.scss'
 
 interface UserPostModel {
     id: number;
@@ -38,18 +39,19 @@ function UsersPage(){
         }, []
     );
 
-    return (<>
+    return (<div className='user-list'>
         {data?.results.map((user) => {
-            return (
+            return (<div className='user-card'>
                 <a href={`/users/${user.id}`}>
                 <div key={user.id}>
                     <h3>{user.name}</h3>
                     <h3>{user.username}</h3>
                     <img src={user.profileImageUrl}/>
                 </div>
-                </a>)
+                </a>
+                </div>)
         })
             
-        }</>)
+        }</div>)
 }
 export default UsersPage;
