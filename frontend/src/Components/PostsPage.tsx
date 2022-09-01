@@ -1,4 +1,5 @@
 import React ,{useState, useEffect} from 'react';
+import './PostsPage.scss'
 
 interface PostUserModel {
     id: number;
@@ -36,16 +37,21 @@ function PostsPage(){
         }, []
     );
 
-    return (<>
+    return (<div className='post-list'>
         {data?.results.map((post) => {
             return (
-                <div key={post.id}>
+                <div className="post-card" key={post.id}>
                     <h3>{post.postedBy.name}</h3>
                     <img src={post.imageUrl}/>
-                    <h3>{post.message}</h3> 
+                    <h4>{post.message}</h4>
+                    <p>{post.createdAt}</p>
+                    <div className="post-react-buttons">
+                        <button className="like-button button">&#128077;</button>
+                        <button className="dislike-button button">&#128078;</button>
+                    </div>
                 </div>)
         })
             
-        }</>)
+        }</div>)
 }
 export default PostsPage;

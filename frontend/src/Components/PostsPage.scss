@@ -1,0 +1,42 @@
+.post-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.post-card {
+    outline: 1px black solid;
+    padding: 10px;
+    text-align: left;
+    box-shadow: 5px 5px 0px #888888;
+
+    img {
+        width: 100%;
+    }
+    
+    .post-react-buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+    
+    button {
+        width: 100%;
+        outline: 1px black solid;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .post-card {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .post-card {
+        width: 30%;
+    }
+}
