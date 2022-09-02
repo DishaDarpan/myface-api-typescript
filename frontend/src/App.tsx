@@ -5,6 +5,7 @@ import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom';
 import PostsPage from './Components/PostsPage';
 import UsersPage from './Components/UsersPage';
 import UserProfile from './Components/UserProfile';
+import CreateUser from './Components/CreateUser';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -26,6 +27,8 @@ function App() {
             element={<UsersPage/>}/>
           <Route path=":userId" 
             element={<UserProfile/>}/>
+            <Route path="create"
+            element={<CreateUser/>}/>
         </Route>
     </Routes>
     </Router>

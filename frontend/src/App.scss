@@ -4,3 +4,14 @@
   padding: 10px;
   text-align: center;
 }
+nav {
+  display:flex;
+    justify-content: space-around;
+    font-size: 25px;
+    background-color:rgb(157, 131, 131);
+    padding:10px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    left:0;
+}
